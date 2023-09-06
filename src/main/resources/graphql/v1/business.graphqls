@@ -1,0 +1,43 @@
+extend type Query {
+    businessList: [Business]
+    business(id: String): Business
+}
+
+extend type Business {
+    coverPhotoUrl: String
+    businessStartingYear: String
+    businessCategoryId: String
+    businessWebsite: String
+    businessType: String
+    businessNumber: String
+    aboutBusiness: String
+    businessLicenseNumber: String
+    dialCode: String
+    isoCode: String
+    address: Address
+    subscriptionPackageList: [SubscriptionPackage]
+    userLikedList: [UserLiked]
+}
+
+type SubscriptionPackage {
+    id: ID
+    name: String
+    description: String
+    price: Float
+    durationInMonths: Int
+    customerEmail: String
+    imageUrl: String
+    trialStart: String
+    trialEnd: String
+    currentPeriodStart: String
+    currentPeriodEnd: String
+    status: String
+}
+
+type UserLiked {
+    id: String
+    email: String
+    firstName: String
+    lastName: String
+    displayName: String
+}

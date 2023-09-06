@@ -1,0 +1,35 @@
+type Query {
+    query: String
+}
+
+type Address {
+    id: String
+    addressType: String
+    country: String
+    address1: String
+    state: String
+    city: String
+    zip: String
+    location: [Point]
+}
+
+type Point {
+    x: Float
+    y: Float
+}
+
+type User  {
+    id: String
+    email: String
+    firstName: String
+    lastName: String
+    displayName: String
+    profilePictureUrl: String
+}
+
+type Business {
+    id: ID
+    businessLogoUrl: String
+    businessName: String
+    businessEmail: String
+}
